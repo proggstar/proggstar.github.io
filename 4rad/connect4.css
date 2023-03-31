@@ -1,0 +1,205 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 20px;
+    animation: bgcolor infinite 30s;
+}
+@keyframes bgcolor{
+    0%{
+        background: #B8B8B8;
+    }
+    10%{
+        background: #A9A9A9;
+    }
+    20%{
+        background: #A0A0A0;
+    }
+    30%{
+        background: #909090;
+    }
+    35%{
+        background:	#808080;
+    }
+    40%{
+        background:	#707070;
+    }
+    45%{
+        background:	#696969;
+    }
+    50%{
+        background: #606060;
+    }
+    55%{
+        background:	#696969;
+    }
+    60%{
+        background:	#707070;
+    }
+    65%{
+        background:	#808080;
+    }
+    70%{
+        background: #909090;
+    }
+    80%{
+        background: #A0A0A0;
+    }
+    85%{
+        background: #A9A9A9;
+    }
+    90%{
+        background: #B8B8B8;
+    }
+    100%{
+        background:	#BEBEBE;
+    }
+    
+}
+     
+.score{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    margin-left: 45%;
+    width: 10%;
+    background: linear-gradient(
+        to right,
+        red 0%,
+        red 50%,
+        yellow 50%,
+        yellow 100%);
+}
+#scoreboard{
+    font-size: 60px;
+    font-weight: bold;
+}
+#board {
+    height: 540px;
+    width: 630px;
+    background-color: #E6BF83;
+    border: 10px solid black;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.tile {
+    height: 70px;
+    width: 70px;
+    margin: 5px;
+
+    /* Circle */
+    background-color: white;
+    border-radius: 50%;
+    border: 5px solid black;
+}
+
+.red-piece {
+    background-color: red;
+}
+
+.yellow-piece {
+    background-color: yellow;
+}
+.text{
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #f5f5f5;
+    text-shadow: 1px 1px 1px #919191, 
+        1px 2px 1px #919191,
+        1px 3px 1px #919191,
+        1px 4px 1px #919191,
+        1px 5px 1px #919191,
+        1px 6px 1px #919191,
+        1px 7px 1px #919191,
+        1px 8px 1px #919191,
+        1px 9px 1px #919191,
+        1px 10px 1px #919191,
+    1px 18px 6px rgba(16,16,16,0.4),
+    1px 22px 10px rgba(16,16,16,0.2),
+    1px 25px 35px rgba(16,16,16,0.2),
+    1px 30px 60px rgba(16,16,16,0.4);
+}
+h1{
+    font-size: 80px;
+}
+h2{
+    font-size: 40px;
+    margin: 5px;
+}
+span{
+    font-size: 40px;
+}
+
+.center{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.outer{
+    position: relative;
+    margin: 0 50px;
+}
+.button{
+    height: 70px;
+    width: 220px;
+    border-radius: 50px;
+}
+.outer button, .button span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.outer button{
+    background: black;
+    color: white;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    z-index: 9;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.button button{
+    height: 60px;
+    width: 210px;
+    border-radius: 50px;
+}
+.outer span{
+    height: 100%;
+    width: 100%;
+    background: inherit;
+}
+.button span{
+    border-radius: 50px;
+}
+
+.outer:hover span:nth-child(1){
+     filter: blur(7px);
+}
+.outer:hover span:nth-child(2){
+     filter: blur(14px);
+}
+.outer:hover{
+    background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
+    color: black;
+    animation:rotate 1.5s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    100%{
+        filter: hue-rotate(720deg);
+    }
+}
+
+
+
