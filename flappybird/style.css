@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1,h2{
+    text-align: center;
+    padding: 10px;
+    margin: 20px;
+}
+
+#highScore {
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: blue;
+    text-shadow: 1px 1px darkblue;
+}
+
+#score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+  
+
+
+#game{
+    width: 400px;
+    height: 500px;
+    border: 2px solid black; /* For å se rammen rundt */
+    margin: auto;
+    overflow: hidden;  /* Alt som er utenfor spillet blir skjult */
+}
+#block{
+    width: 50px;
+    height: 500px;
+    background-color: lightgreen; 
+    position: relative;
+    left: 400px;
+    animation: block 3s infinite linear; /* Slik at spillet går om og om igjen */
+}
+@keyframes block{  /* Starter til venstre og til slutt til høyre */
+    0%{left:400px} 
+    100%{left:-50px}
+}
+#hole{
+    width: 50px;
+    height: 150px;
+    background-color: white; /* Endre denne til en annen farge for å se hvor det blir hvitt */
+    position: relative;
+    left: 400px;
+    top: -500px;
+    animation: block 3s infinite linear;
+}
+#character{ /* Her kan du legge til et bilde dersom du får tid */
+    width: 20px;
+    height: 20px;
+ /*    background-image: url(.jpg); */
+    background-color: blue;
+    position: absolute;
+    top: 100px;
+    border-radius: 50%;
+}
