@@ -1,0 +1,59 @@
+body {
+    font-family: 'Comic Sans MS', cursive;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: azure;
+}
+
+
+.alt{
+    width: 500px;
+    margin-top: 100px;
+    padding: 15px 0;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 3px solid black;
+    background-color: antiquewhite;
+
+}
+
+header, main {
+    text-align: center; 
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header h2 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+
+main * {
+    font-size: 25px;
+}
+
+input, button {
+    padding: 5px;
+}
+
+.wrong{
+    background-color: rgb(255, 100, 100);
+}
+.correct{
+    background-color: rgb(100, 255, 100);
+}
+
+button {
+    width: 150px;
+    margin: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: azure;
+    border: 3px solid black;
+    color: black;
+    border-radius: 30px;
+}
