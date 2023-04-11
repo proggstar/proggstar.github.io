@@ -34,6 +34,8 @@ label.logo{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 100px;
+    margin-bottom: 100px;
 }
 
 .card{
@@ -57,7 +59,7 @@ label.logo{
 .flex-box .img2{
     height: 400px;
     width: 100%;
-    background: url('https://nordnorsk.vitensenter.no/sites/default/files/styles/large/public/field/image/plump1.jpg?itok=R5zhUWPu');
+    background: url('https://www.patticrafts.co.uk/wp-content/uploads/2022/06/K485.jpg');
     border-radius: 5px;
     background-size: cover;
 }
@@ -65,20 +67,6 @@ label.logo{
     height: 400px;
     width: 100%;
     background: url('https://upload.wikimedia.org/wikipedia/en/0/0a/Flappy_Bird_icon.png');
-    border-radius: 5px;
-    background-size: cover;
-}
-.flex-box .img4{
-    height: 400px;
-    width: 100%;
-    background: url('https://www.patticrafts.co.uk/wp-content/uploads/2022/06/K485.jpg');
-    border-radius: 5px;
-    background-size: cover;
-}
-.flex-box .img5{
-    height: 400px;
-    width: 100%;
-    background: url('https://www.patticrafts.co.uk/wp-content/uploads/2022/06/K485.jpg');
     border-radius: 5px;
     background-size: cover;
 }
