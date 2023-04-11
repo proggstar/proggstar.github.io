@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="huske.css">
+</head>
+<body>
+  <header>
+  <div class="center">
+    <h1>Huskespill</h1>
+  </div>
+  <h2 class="score">Score: 0</h2>
+  </header>
+
+  <section class="huskespill"> <!-- Div rundt alle kortene -->
+    <div class="kort" data-like="Forside1">
+        <!-- baksiden er siden som vises først i huskespillet, forsiden er siden som vises når kortet blir snudd rundt -->
+      <img class="forside" src="Forside1.JPG" alt="Golfball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Forside1">
+      <img class="forside" src="Forside1.JPG" alt="Golfball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+
+    <div class="kort" data-like="Fotball">
+      <img class="forside" src="Forside2.png" alt="Fotball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Fotball">
+      <img class="forside" src="Forside2.png" alt="Fotball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+
+    <div class="kort" data-like="Volleyball">
+      <img class="forside" src="Forside3.jpg" alt="Volleyball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Volleyball">
+      <img class="forside" src="Forside3.jpg" alt="Volleyball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+
+    <div class="kort" data-like="Basketball">
+      <img class="forside" src="Forside4.jpg" alt="Basketball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Basketball">
+      <img class="forside" src="Forside4.jpg" alt="Basketball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+
+    <div class="kort" data-like="Håndball">
+      <img class="forside" src="Forside5.jpg" alt="Håndball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Håndball">
+      <img class="forside" src="Forside5.jpg" alt="Håndball" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+
+    <div class="kort" data-like="Ping Pong">
+      <img class="forside" src="Forside6.jpg" alt="Ping pong" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+    <div class="kort" data-like="Ping Pong">
+      <img class="forside" src="Forside6.jpg" alt="Ping Pong" />
+      <img class="bakside" src="logo.png" alt="sportBilde" />
+    </div>
+  </section>
+
+  <button class="prøv-igjen">Prøv på nytt!</button>
+
+
+  <script src="huske.js"></script>
+</body>
+</html>

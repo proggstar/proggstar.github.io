@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    /* Border box gjøt at padding og margin ikke gjør den orginale høyden og breddden større */
+    box-sizing: border-box;
+  }
+
+.center{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  color: lightblue;
+  text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+  font-size: 40px;
+}
+
+.score{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  color: lightblue;
+  text-shadow: 2px 4px 4px rgba(46,91,173,0.6);
+}
+
+  body {
+    height: 800px; 
+    display: flex;
+    flex-direction: column;
+    background: whitesmoke;
+  }
+  
+  .huskespill {
+    width: 640px;
+    height: 640px;
+    /* Gjør at den senterer seg i midten */
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* perspecitve gir dybde til elementet når det flippes */
+    perspective: 1000px;
+  }
+  
+  .kort {
+    /* Gjør at de legger seg intill hverandre */
+    width: calc(25% - 10px);
+    height: calc(33.333% - 10px);
+    margin: 5px;
+    position: relative;
+    /* For at transition skal funke */
+    transform: scale(1);
+    /* Gir også den 3d effekten når vi flipper kortet */
+    transform-style: preserve-3d;
+    transition: transform .5s;
+    box-shadow: 1px 1px 1px gray;
+  }
+  
+  .kort:active {
+    /* Den blir 97% av orginal størrelse når vi trykker */
+    transform: scale(0.97);
+    /* Litt smoothere */
+    transition: transform .2s;
+  }
+  
+  .kort.flip {
+    /* Når huskekort blir trykket på vil den rotere 180 grader */
+    transform: rotateY(180deg);
+  }
+  
+
+  .forside,
+  .bakside {
+    width: 100%;
+    height: 100%;
+    background-position: cover;
+    padding: 20px;
+    position: absolute;
+    border-radius: 5px;
+    background: lightblue;
+    /* Gjør at baksiden "flippet" ikke blir vist når vi trykker på huskekortet */
+    backface-visibility: hidden;
+  }
+  
+  .forside {
+    transform: rotateY(180deg);
+  }
+
+  .prøv-igjen {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    font-size: 30px;
+  }
+
