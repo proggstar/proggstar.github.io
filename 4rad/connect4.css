@@ -203,6 +203,24 @@ span{
 
 @media only screen and (max-width: 730px) {
     #board{
+        height: 70vh;
+        width: 85vw;
+    }
+    .tile {
+        height: 10%;
+        max-height: 40px;
+        width: 11%;
+        max-width: 40px;
+        margin: 2%;
+    }
+    .score {
+        font-size: 30px;
+        margin-left: 25%;
+        width: 50%;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #board{
         height: 50vh;
         width: 70vw;
     }
@@ -211,7 +229,7 @@ span{
         max-height: 40px;
         width: 8%;
         max-width: 40px;
-        margin: 1.2%;
+        margin: 1%;
     }
     .score {
         font-size: 30px;
