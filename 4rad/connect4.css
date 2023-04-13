@@ -219,6 +219,13 @@ span{
         width: 50%;
     }
 }
+@media only screen and (max-width: 940px) {
+    .score {
+        font-size: 30px;
+        margin-left: 25%;
+        width: 50%;
+    }
+}
 @media only screen and (max-width: 500px) {
     #board{
         height: 50vh;
@@ -231,10 +238,6 @@ span{
         max-width: 40px;
         margin: 1%;
     }
-    .score {
-        font-size: 30px;
-        margin-left: 25%;
-        width: 50%;
-    }
+    
 }
 
