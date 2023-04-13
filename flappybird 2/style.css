@@ -59,12 +59,74 @@ h1,h2{
     top: -500px;
     animation: block 3s infinite linear;
 }
-#character{ /* Her kan du legge til et bilde dersom du får tid */
+#character{ 
     width: 20px;
     height: 20px;
- /*    background-image: url(.jpg); */
     background-color: blue;
     position: absolute;
     top: 100px;
     border-radius: 50%;
 }
+
+    #jumpButton {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 40px;
+        font-weight: bold;
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+
+  }
+  
+  #jumpButton:hover {
+    background-color: darkblue;
+  }
+
+  
+  
+/* Gjør nettsiden responsiv */
+/* For skjermer som er mindre enn 600 piksler brede */
+@media (max-width: 600px) {
+    /* Reduser bredden på #game og sentrer den */
+    #game {
+      width: 90%;
+      margin: auto;
+    }
+    
+    /* Gjør #block og #hole mindre og sentrer dem */
+    #block, #hole {
+      width: 30px;
+      left: 90%;
+    }
+    
+    /* Juster størrelsen på karakteren */
+    #character {
+      width: 15px;
+      height: 15px;
+    }
+  }
+  
+  /* For skjermer som er mellom 600 og 1200 piksler brede */
+  @media (min-width: 600px) and (max-width: 1200px) {
+    /* Reduser bredden på #game og sentrer den */
+    #game {
+      width: 80%;
+      margin: auto;
+    }
+    
+    /* Gjør #block og #hole mindre og sentrer dem */
+    #block, #hole {
+      width: 40px;
+      left: 90%;
+    }
+    
+    /* Juster størrelsen på karakteren */
+    #character {
+      width: 20px;
+      height: 20px;
+    }
+  }
