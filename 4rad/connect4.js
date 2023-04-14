@@ -22,7 +22,6 @@ window.onload = function () {
   setGame();
 };
 
-
 /* 
 Eksempel
 let liste = [[1,2,3],[3,4,5]]
@@ -33,7 +32,6 @@ liste[0][0] // -> 1
 liste[1][1] // -> 4
 liste[6] // -> undefined
  */
-
 
 //Denne kalles når du trykker på newGameButton
 function resetBoard() {
@@ -120,36 +118,39 @@ function setPiece() {
   currColumns[c] = r; //update the array
 
   checkWinner();
-
 }
 
-//Etter man har kalt setPiece kaller man funkjsonen checkWinner fordi brettet har fått en ny usjekket tilstand. Man må sjekke om nye tilstanden til brettet er en winner situasjon. 
+//Etter man har kalt setPiece kaller man funkjsonen checkWinner hver gang en setPiece funkjsonen kjøres fordi brettet har fått en ny usjekket tilstand. Man må sjekke om nye tilstanden til brettet er en winner situasjon.
 function checkWinner() {
-  // horizontal
-//Sjekker om mulig 4 på rad horisontalt
+  //Horisontalt, vannrett
+  //Sjekker om mulig 4 på rad horisontalt
+  //R = horisontalt og c = vertikalt.
+  //Funkjsonen itererer hver rad og kolonne for å sjekke om det er en 4 på rad situasjon, er det det kalles funkjsonen settWinner.
   for (let r = 0; r < rows; r++) {
     for (let c = 0; c < columns - 3; c++) {
+      //Her sjekker om board[r][c] at den ikke er tom, at det er en brikke der.
       if (board[r][c] != " ") {
         if (
-            //Dersom denne tilstanden er sann kaller man funksjonen setWinner. 
+          //Dersom denne tilstanden er sann kaller man funksjonen setWinner.
+          // && betyr denne og denne er sann.
           board[r][c] == board[r][c + 1] &&
           board[r][c + 1] == board[r][c + 2] &&
           board[r][c + 2] == board[r][c + 3]
         ) {
           setWinner(r, c);
           return;
+          // avslutt
         }
       }
     }
   }
-
-  // vertical
+  // vertikalt
   //Sjekker om mulig 4 på rad horisontalt
   for (let c = 0; c < columns; c++) {
     for (let r = 0; r < rows - 3; r++) {
       if (board[r][c] != " ") {
         if (
-            //Dersom denne tilstanden er sann kaller man funksjonen setWinner. 
+          //Dersom denne tilstanden er sann kaller man funksjonen setWinner.
           board[r][c] == board[r + 1][c] &&
           board[r + 1][c] == board[r + 2][c] &&
           board[r + 2][c] == board[r + 3][c]
@@ -161,13 +162,13 @@ function checkWinner() {
     }
   }
 
-  // anti diagonal
+  // diagonal 1
   //Sjekker om mulig 4 på rad. Den stopper på r < rows- 3 fordi det vil på diagonalen hvor index er 0 til 3 er det umulig å få fire på rad
   for (let r = 0; r < rows - 3; r++) {
     for (let c = 0; c < columns - 3; c++) {
       if (board[r][c] != " ") {
         if (
-            //Dersom denne tilstanden er sann kaller man funksjonen setWinner. 
+          //Dersom denne tilstanden er sann kaller man funksjonen setWinner.
           board[r][c] == board[r + 1][c + 1] &&
           board[r + 1][c + 1] == board[r + 2][c + 2] &&
           board[r + 2][c + 2] == board[r + 3][c + 3]
@@ -179,19 +180,18 @@ function checkWinner() {
     }
   }
 
-  // diagonal
+  // diagonal 2
   //Sjekker om mulig 4 på rad. Den begynner på r = 3 og stopper til det ikke er flere rows igjen.
   for (let r = 3; r < rows; r++) {
     for (let c = 0; c < columns - 3; c++) {
       if (board[r][c] != " ") {
         if (
-            //Dersom denne tilstanden er sann kaller man funksjonen setWinner. 
+          //Dersom denne tilstanden er sann kaller man funksjonen setWinner.
           board[r][c] == board[r - 1][c + 1] &&
           board[r - 1][c + 1] == board[r - 2][c + 2] &&
           board[r - 2][c + 2] == board[r - 3][c + 3]
         ) {
-
-        // Her sender vi r og c på vinner brikken som ble lagt.
+          // Her sender vi r og c på vinner brikken som ble lagt.
           setWinner(r, c);
           return;
         }
@@ -200,10 +200,10 @@ function checkWinner() {
   }
 }
 
-//Kjørers bare en gang, i motsetning til checkWinner() som kjøres hver gang man legger en brikke. 
+//Kjørers bare en gang, i motsetning til checkWinner() som kjøres hver gang man legger en brikke.
 function setWinner(r, c) {
   let winner = document.getElementById("winner");
-  
+
   // Her henter den opp tilen den fikk sendt fra checkWinner() funksjonen. Den sjekker om denne tilen var eid av playerRed. Er den ikke det må det være yellow!
   if (board[r][c] == playerRed) {
     winner.innerText = "Rød vinner!";
@@ -218,9 +218,7 @@ function setWinner(r, c) {
 }
 //Trykker på btnNewgame
 function newGame() {
-    //Kjører funksjone resetBoard, tømmer brettet. gameOver = false for å kunne setPiece(), plassere brikker. 
+  //Kjører funksjone resetBoard, tømmer brettet. gameOver = false for å kunne setPiece(), plassere brikker.
   resetBoard();
   gameOver = false;
 }
-
-
